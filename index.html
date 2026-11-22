@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HALAMAN LOGIN -->
+    <div id="loginPage" class="login-container">
+        <div class="login-box">
+            <h1>📚 Digital Library</h1>
+            <p>Selamat datang di perpustakaan digital</p>
+
+            <form id="loginForm">
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Username"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    required
+                >
+
+                <button type="submit">Login</button>
+            </form>
+
+            <p class="info">Silakan login untuk masuk</p>
+        </div>
+    </div>
+
+    <!-- HALAMAN DASHBOARD -->
+    <div id="dashboard" class="dashboard">
+
+        <header>
+            <h1>📚 Digital Library</h1>
+            <button id="logoutBtn" class="logout">Logout</button>
+        </header>
+
+        <section class="welcome">
+            <h2>Halo, <span id="userDisplay"></span>!</h2>
+            <p>Selamat datang di perpustakaan digital.</p>
+        </section>
+
+        <!-- FORM TAMBAH BUKU -->
+        <section class="book-box">
+            <h2>Tambah Buku</h2>
+
+            <form id="bookForm">
+                <input
+                    type="text"
+                    id="bookTitle"
+                    placeholder="Judul Buku"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="bookAuthor"
+                    placeholder="Nama Penulis"
+                    required
+                >
+
+                <button type="submit" id="submitBtn">
+                    Tambah Buku
+                </button>
+            </form>
+        </section>
+
+        <!-- DAFTAR BUKU -->
+        <section class="book-box">
+            <h2>Koleksi Buku</h2>
+
+            <input
+                type="text"
+                id="searchBook"
+                placeholder="Cari judul buku..."
+            >
+
+            <div class="summary">
+                <p>Total Buku: <span id="totalBooks">0</span></p>
+                <p>Selesai Dibaca: <span id="readBooks">0</span></p>
+            </div>
+
+            <div id="bookList"></div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
